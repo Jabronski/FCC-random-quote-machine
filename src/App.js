@@ -28,7 +28,7 @@ function App() {
   const [quote, setQuote] = useState(quoteAndAuthor[0].quote);
   const [author, setAuthor] = useState(quoteAndAuthor[0].author);
   const [quotesArr, setQuotesArr] = useState(null);
-  const [ourColor, setOurColor] = useState('#282c34')
+  const [ourColor, setOurColor] = useState("#" + Math.floor(Math.random() * 16777215).toString(16))
 
   // Is called when button is pressed (onClick)
   const generator = () => {
@@ -73,7 +73,7 @@ function App() {
 
           {/* The credits */}
           <div id="footer">
-
+            <p id="footer-text">by Jabronski</p>
           </div>
 
         </div>
