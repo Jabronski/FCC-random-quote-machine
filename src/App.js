@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
 import './App.scss';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTumblr, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
@@ -15,9 +15,7 @@ function App() {
   }
 
   // Function for delivering API URL, not sure exactly
-  useEffect(() => {
-    fetchQuotes(quotesURL)
-  }, [quotesURL])
+  
 
   // Initial value for text and author, because I can't initialize 
   const quoteAndAuthor = [
@@ -27,7 +25,7 @@ function App() {
   // [variable name, change state function] = setState(value)
   const [quote, setQuote] = useState(quoteAndAuthor[0].quote);
   const [author, setAuthor] = useState(quoteAndAuthor[0].author);
-  const [quotesArr, setQuotesArr] = useState(null);
+  const [quotesArr, setQuotesArr] = useState([null]);
   const [ourColor, setOurColor] = useState("#" + Math.floor(Math.random() * 16777215).toString(16))
 
   // Is called when button is pressed (onClick)
